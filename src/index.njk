@@ -719,7 +719,18 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem;
-                animation: fadeUp 1.2s ease-out 1s backwards;
+                animation: fadeUpCenter 1.2s ease-out 1s backwards;
+            }
+
+            @keyframes fadeUpCenter {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                }
             }
 
             .scroll-indicator span {

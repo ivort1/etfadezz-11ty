@@ -66,6 +66,7 @@
 .gallery-grid {
     columns: 2;
     column-gap: 0.5rem;
+    column-fill: balance;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -73,7 +74,9 @@
 
 .photo-item {
     break-inside: avoid;
-    margin-bottom: 0.5rem;
+    -webkit-column-break-inside: avoid;
+    display: inline-block;
+    width: 100%;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
