@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ET Fadezz | Barber in Fontana, CA</title>
+        <meta name="description" content="Premium barbershop in Fontana, CA. Expert haircuts, fades, and beard grooming serving Los Angeles, Orange, and San Bernardino counties. Book your appointment today.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
@@ -259,90 +260,92 @@
             <a href="{{ site.information.cal_url }}" class="book-btn">Book Now</a>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <p class="hero-eyebrow">EST. 2023</p>
-                <h1>Premium Barber<span>Fontana, CA</span></h1>
-                <p class="hero-tagline">
-                    Expert haircuts, fades & beard grooming serving Los Angeles, Orange & San Bernardino counties.
-                </p>
-                <a href="{{ site.information.cal_url }}" class="hero-cta hero-cta-primary">Book Your Appointment</a>
-                <a href="tel:{{ site.information.phone }}" class="hero-cta hero-cta-secondary">Call the Studio</a>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="section-header">
-                <p class="section-label">What We Offer</p>
-                <h2 class="section-title">Services</h2>
-            </div>
-            <div class="services-grid">
-                {% for service in site.services %}
-                    <a href="{{ service.url }}" class="service-item">
-                        <div>
-                            <div class="service-name">{{ service.name }}</div>
-                            <span class="service-duration">{{ service.duration }}</span>
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">EST. 2023</p>
+                    <h1>Premium Barber<span>Fontana, CA</span></h1>
+                    <p class="hero-tagline">
+                        Expert haircuts, fades & beard grooming serving Los Angeles, Orange & San Bernardino counties.
+                    </p>
+                    <a href="{{ site.information.cal_url }}" class="hero-cta hero-cta-primary">Book Your Appointment</a>
+                    <a href="tel:{{ site.information.phone }}" class="hero-cta hero-cta-secondary">Call the Studio</a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </section>
+    
+            <!-- Services Section -->
+            <section class="services" id="services">
+                <div class="section-header">
+                    <p class="section-label">What We Offer</p>
+                    <h2 class="section-title">Services</h2>
+                </div>
+                <div class="services-grid">
+                    {% for service in site.services %}
+                        <a href="{{ service.url }}" class="service-item">
+                            <div>
+                                <div class="service-name">{{ service.name }}</div>
+                                <span class="service-duration">{{ service.duration }}</span>
+                            </div>
+    
+                            <span class="service-price">
+                                {{ service.price }}
+    
+                                <svg class="service-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+    
+            <!-- Photos Section -->
+            <section class="gallery" id="gallery">
+                <div class="section-header">
+                    <p class="section-label">Our Work</p>
+                    <h2 class="section-title">Gallery</h2>
+                </div>
+                <div class="gallery-grid">
+                    {% for image in gallery %}
+                        <div class="photo-item">
+                            {% if loop.index <= 4 %}
+                                {% galleryImage image.src, image.alt, [400, 800], "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw", true %}
+                            {% else %}
+                                {% galleryImage image.src, image.alt, [400, 800], "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw", false %}
+                            {% endif %}
                         </div>
-
-                        <span class="service-price">
-                            {{ service.price }}
-
-                            <svg class="service-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                {% endfor %}
-            </div>
-        </section>
-
-        <!-- Photos Section -->
-        <section class="gallery" id="gallery">
-            <div class="section-header">
-                <p class="section-label">Our Work</p>
-                <h2 class="section-title">Gallery</h2>
-            </div>
-            <div class="gallery-grid">
-                {% for image in gallery %}
-                    <div class="photo-item">
-                        {% if loop.index <= 4 %}
-                            {% galleryImage image.src, image.alt, [400, 800], "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw", true %}
-                        {% else %}
-                            {% galleryImage image.src, image.alt, [400, 800], "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw", false %}
-                        {% endif %}
-                    </div>
-                {% endfor %}
-            </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="faqs" id="faqs" data-component="faq">
-            <div class="section-header">
-                <p class="section-label">Have a question?</p>
-                <h2 class="section-title">FAQs</h2>
-            </div>
-
-            <div class="faq-list">
-                {% for faq in site.faqs %}
-                    <details name="faqs" class="faq-item" data-faq-id="faq-{{ loop.index }}">
-                        <summary class="faq-item__question">
-                            <span class="faq-item__question-text">{{ faq.question }}</span>
-                            <span class="faq-item__icon" aria-hidden="true"></span>
-                        </summary>
-                        
-                        <div class="faq-item__answer">
-                            <p>{{ faq.answer }}</p>
-                        </div>
-                    </details>
-                {% endfor %}
-            </div>
-        </section>
+                    {% endfor %}
+                </div>
+            </section>
+    
+            <!-- FAQs Section -->
+            <section class="faqs" id="faqs" data-component="faq">
+                <div class="section-header">
+                    <p class="section-label">Have a question?</p>
+                    <h2 class="section-title">FAQs</h2>
+                </div>
+    
+                <div class="faq-list">
+                    {% for faq in site.faqs %}
+                        <details name="faqs" class="faq-item" data-faq-id="faq-{{ loop.index }}">
+                            <summary class="faq-item__question">
+                                <span class="faq-item__question-text">{{ faq.question }}</span>
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </summary>
+                            
+                            <div class="faq-item__answer">
+                                <p>{{ faq.answer }}</p>
+                            </div>
+                        </details>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer class="footer" id="book">
