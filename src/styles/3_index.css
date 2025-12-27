@@ -252,8 +252,20 @@ details[open] .faq-item__icon::after {
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: var(--white);
+.footer-links a:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+            
+@media(hover:hover) {
+    .footer-links a:hover {
+        color: var(--white);
+    }
+
+    .footer-links a:active {
+        opacity: 0.8;
+        transform: scale(0.97);
+    }
 }
 
 .footer-contact {
@@ -330,13 +342,25 @@ details[open] .faq-item__icon::after {
     transition: all 0.3s ease;
 }
 
-.social-links a:hover {
-    border-color: var(--white);
-    background: var(--white);
+.social-links a:active {
+    opacity: 0.7;
+    transform: scale(0.98);
 }
+            
+@media(hover:hover) {
+    .social-links a:hover {
+        border-color: var(--white);
+        background: var(--white);
+    }
 
-.social-links a:hover svg {
-    color: var(--black);
+    .social-links a:hover svg {
+        color: var(--black);
+    }
+
+    .social-links a:active {
+        opacity: 0.8;
+        transform: scale(0.97);
+    }
 }
 
 .social-links svg {
