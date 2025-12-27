@@ -556,6 +556,7 @@
                 }
             }
 
+            /* Base button styles */
             .book-btn {
                 padding: 0.625rem 1.25rem;
                 background: var(--white);
@@ -568,10 +569,27 @@
                 transition: all 0.3s ease;
             }
 
-            .book-btn:hover {
-                background: transparent;
-                color: var(--white);
-                outline: 1px solid var(--white);
+            /* Hover state */
+            @media (hover: hover) {
+                .book-btn:hover {
+                    background: transparent;
+                    color: var(--white);
+                    outline: 1px solid var(--white);
+                }
+            }
+
+            /* Compact button when scrolled - this applies to all screen sizes first */
+            .nav.scrolled .book-btn {
+                font-size: 0.5rem;
+                padding: 0.35rem 0.5rem;
+            }
+
+            /* Then desktop override comes AFTER to override the scrolled state */
+            @media (min-width: 768px) {
+                .nav.scrolled .book-btn {
+                    font-size: 0.7rem;
+                    padding: 0.625rem 1.25rem;
+                }
             }
 
             /* Hero Section */
@@ -975,8 +993,8 @@
             let lastScrollY = window.scrollY;
             let scrollTimeout = null;
             let isScrollingDown = false;
-            const scrollThreshold = 50;
-            const hideThreshold = 200;
+            const scrollThreshold = 150;
+            const hideThreshold = 400;
 
             function isMobile() {
                 return window.innerWidth < 768;
