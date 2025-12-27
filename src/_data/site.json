@@ -1,0 +1,144 @@
+{
+    "information": {
+        "name": "ET Fadezz",
+        "location": "Fontana, CA",
+        "phone": "+16262164488",
+        "phone_ui": "(626) 216-4488",
+        "cal_url": "https://cal.com/etfadezz"
+    },
+    "business_hours": [
+        {
+            "day": "Mon",
+            "open": "10am",
+            "close": "7pm",
+            "closed": false
+        },
+        {
+            "day": "Tue",
+            "open": "10am",
+            "close": "7pm",
+            "closed": false
+        },
+        {
+            "day": "Wed",
+            "open": "10am",
+            "close": "7pm",
+            "closed": false
+        },
+        {
+            "day": "Thu",
+            "open": "10am",
+            "close": "7pm",
+            "closed": false
+        },
+        {
+            "day": "Fri",
+            "open": "9am",
+            "close": "3pm",
+            "closed": false
+        },
+        {
+            
+            "day": "Sat",
+            "open": "Varies",
+            "close": "",
+            "closed": false
+        },
+        {
+            
+            "day": "Sun",
+            "open": "Varies",
+            "close": "",
+            "closed": false
+        }
+    ],
+    "social_media": {
+        "instagram_handle": "@etfadezz",
+        "instagram_url": "https://www.instagram.com/etfadezz/"
+    },
+    "services": [
+        {
+            "name": "Haircut",
+            "description": "A fresh, modern haircut with precise cuts for a clean look.",
+            "price": "$20.00",
+            "duration": "45 min",
+            "popular": false,
+            "url": "https://cal.com/etfadezz/haircut",
+            "src": "clippers.svg"
+        },
+        {
+            "name": "Haircut + Beard",
+            "description": "A stylish haircut combined with expert beard trimming for a balanced appearance.",
+            "price": "$30.00",
+            "duration": "60 min",
+            "popular": true,
+            "url": "https://cal.com/etfadezz/haircut-beard",
+            "src": "recliner.svg"
+        },
+        {
+            "name": "Lineup",
+            "description": "A sharp, precise service to define your edges and keep your look neat.",
+            "price": "$10.00",
+            "duration": "15 min",
+            "popular": false,
+            "url": "https://cal.com/etfadezz/lineup",
+            "src": "blade.svg"
+        },
+        {
+            "name": "Shave",
+            "description": "A traditional straight razor or nape shave that delivers a smooth, crisp finish.",
+            "price": "$10.00",
+            "duration": "20 min",
+            "popular": false,
+            "url": "https://cal.com/etfadezz/shave",
+            "src": "razor.svg"
+        },
+        {
+            "name": "House Call",
+            "description": "We come directly to your doorstep, delivering crisp haircuts and styling tailored to your needs.",
+            "price": "From $60.00",
+            "duration": "Varies",
+            "popular": false,
+            "url": "https://cal.com/etfadezz/house-call",
+            "src": "home.svg"
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Do I need an appointment, or are walk-ins welcome?",
+            "answer": "We operate on an appointment-only basis to ensure each client receives personalized, premium grooming service. We highly recommend booking your appointment through our simple online scheduling system to secure your preferred time. If you prefer, appointments can also be set up via text or phone. This structured approach minimizes wait times and helps us deliver a consistently outstanding barbershop experience."
+        },
+        {
+            "question": "Where is your studio located, and what areas do you serve?",
+            "answer": "Our studio is proudly based in Fontana, CA. Beyond our Fontana location, we expand our reach with convenient house-call services in cities across San Bernardino County, Orange County, and Los Angeles County. For more detailed information on specific service areas or to verify availability in your neighborhood, please contact us. We're committed to bringing exceptional service right to your doorstep."
+        },
+        {
+            "question": "How do I reschedule or cancel my appointment and what is your refund policy?",
+            "answer": "You can reschedule or cancel your appointment quickly through our online scheduling platform, as well as by text or phone—whichever is most convenient for you. Please note that to be eligible for a refund, cancellations must be made at least one hour before your scheduled appointment time. Cancellations made less than one hour before, as well as no-shows, are non-refundable, with no exceptions. This policy helps us maintain efficient scheduling and ensures every client receives the dedicated service they expect."
+        },
+        {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept a variety of payment methods in-person for your convenience, including cash, major credit and debit cards (Visa, MasterCard, American Express, Discover), and mobile payment options such as Apple Pay and Google Pay. Our goal is to make the payment process as seamless as possible, allowing you to focus on enjoying your premium grooming experience."
+        },
+        {
+            "question": "How do you calculate the price of a house call?",
+            "answer": "The cost is determined by the distance traveled from our Fontana base, the number of clients served during the appointment, and the specific types of services requested. Please note that our minimum charge is $60, regardless of all other factors. For a precise quote that reflects your unique requirements, please contact us directly."
+        },
+        {
+            "question": "Do you offer early/after hours services?",
+            "answer": "Yes, we do offer early and after-hours services for an additional fee. Whether you're in need of an early morning cut or a late-evening appointment, our flexible scheduling options cater to busy lifestyles. Please contact us to confirm availability and pricing details."
+        },
+        {
+            "question": "Do you cut kids' hair?",
+            "answer": "Yes, we do! We cater to children of all ages and take pride in offering professional kids’ haircuts in a friendly, welcoming environment. Each child receives a precise and stylish haircut, making the experience enjoyable for both kids and parents. Whether you're booking an appointment online or scheduling via phone or text, we're here to help your little ones look their absolute best."
+        },
+        {
+            "question": "Do you have a public restroom?",
+            "answer": "No, we do not have a public restroom available at our barbershop. We focus exclusively on providing a premium, personalized grooming experience, so please plan accordingly if you require restroom access."
+        },
+        {
+            "question": "How can I contact your studio for more information or to ask a question?",
+            "answer": "To reach out for more details about our premium services, simply call or text us at (626) 216-4488. You can also send us a direct message on our Instagram page, @etfadezz. Our team is ready to answer your questions and help guide you toward the best barbershop experience possible."
+        }
+    ]
+}

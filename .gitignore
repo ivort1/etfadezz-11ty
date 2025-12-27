@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output (Netlify will generate this during deployment)
+_site/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables (if you ever add any)
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*

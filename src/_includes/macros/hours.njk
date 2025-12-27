@@ -1,0 +1,15 @@
+{% macro hours(day, open, close, closed) %}
+    <div class="hours-row">
+        <span class="hours-day">{{ day }}</span>
+        <span class="hours-divider"></span>
+        <span class="hours-time {% if closed %}hours-time--closed{% endif %}">
+            {% if closed %}
+                Closed
+            {% elif close %}
+                {{ open }} - {{ close }}
+            {% else %}
+                {{ open }}
+            {% endif %}
+        </span>
+    </div>
+{% endmacro %}
