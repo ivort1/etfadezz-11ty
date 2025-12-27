@@ -5,10 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ET Fadezz | Barber in Fontana, CA</title>
         <meta name="description" content="Premium barbershop in Fontana, CA. Expert haircuts, fades, and beard grooming serving Los Angeles, Orange, and San Bernardino counties. Book your appointment today.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+ 
+        <!-- Preload -->
+        <link rel="preload" href="/fonts/CormorantGaramond-300.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+        
         <style>
+            /* Self-hosted fonts */
+            @font-face {
+                font-family: 'Cormorant Garamond';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url('/public/fonts/CormorantGaramond-300.woff2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url('/public/fonts/Poppins-300.woff2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url('/public/fonts/Poppins-400.woff2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url('/public/fonts/Poppins-500.woff2') format('woff2');
+            }
+
             :root {
                 --black: #0a0a0a;
                 --black-soft: #141414;
@@ -30,10 +65,10 @@
             }
 
             body {
-                font-family: 'Libre Franklin', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 background-color: var(--black);
                 color: var(--white);
-                font-weight: 300;
+                font-weight: 400;
                 line-height: 1.6;
                 overflow-x: hidden;
             }
@@ -247,10 +282,98 @@
             .section-title {
                 font-size: clamp(2rem, 8vw, 3rem);
             }
+
+            /* Media Queries */
+            @media (min-width: 768px) {
+                .nav {
+                    padding: 1.5rem 3rem;
+                }
+
+                .logo {
+                    font-size: 1.5rem;
+                }
+
+                section {
+                    padding: 8rem 3rem;
+                }
+
+                .hero {
+                    padding: 8rem 3rem 6rem;
+                }
+
+                .hero-tagline {
+                    max-width: 400px;
+                }
+
+                .services-grid {
+                    max-width: 600px;
+                }
+
+                .service-item {
+                    padding: 2rem;
+                }
+
+                .service-item:hover {
+                    padding-left: 2.5rem;
+                }
+
+                .service-name {
+                    font-size: 1.5rem;
+                }
+
+                .photos-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 0.75rem;
+                    max-width: 900px;
+                }
+
+                .faq-list {
+                    max-width: 700px;
+                }
+
+                .footer {
+                    padding: 6rem 3rem 2rem;
+                }
+
+                .footer-links {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 3rem;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .nav {
+                    padding: 2rem 5rem;
+                }
+
+                section {
+                    padding: 10rem 5rem;
+                }
+
+                .section-header {
+                    margin-bottom: 5rem;
+                }
+
+                .services-grid {
+                    max-width: 700px;
+                }
+
+                .photos-grid {
+                    max-width: 1100px;
+                }
+            }
         </style>
 
         <link rel="stylesheet" href="/styles/1_preflight.css">
-        <link rel="stylesheet" href="/styles/3_index.css">
+        
+        <!-- Non-blocking below-fold CSS -->
+        <link rel="stylesheet" href="/styles/3_index.css" media="print" onload="this.media='all'">
+
+        <!-- Fallback for users with JavaScript disabled -->
+        <noscript>
+            <link rel="stylesheet" href="/styles/3_index.css">
+        </noscript>
     </head>
     <body>
         <!-- Navigation -->
