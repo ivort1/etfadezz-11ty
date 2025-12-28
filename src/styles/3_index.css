@@ -292,7 +292,7 @@ details[open] .faq-item__icon::after {
     border: solid 1px var(--gray);
     margin: 0 auto 2.5rem auto;
     max-width: 500px;
-    padding: 2rem;
+    padding: 5rem 2.5rem;
     text-transform: uppercase;
 }
 
