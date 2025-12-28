@@ -1059,19 +1059,20 @@
                     nav.classList.remove('hidden');
                 }
             });
-
-            // Dynamic year in footer
-            const footerDate = document.getElementById('footer-dynamic-date');
-            const currentYear = new Date().getFullYear();
-            footerDate.textContent = currentYear;
         </script>
 
-        <script type="module">
-            import { FAQClient } from '/scripts/faq.js';
-            
-            document.addEventListener('DOMContentLoaded', () => {
-                const faq = new FAQClient();
-                faq.init();
+        <script>
+            window.addEventListener('load', () => {
+                // FAQ initialization
+                import('/scripts/faq.js').then(({ FAQClient }) => {
+                    const faq = new FAQClient();
+                    faq.init();
+                });
+
+                // Dynamic year in footer
+                const footerDate = document.getElementById('footer-dynamic-date');
+                const currentYear = new Date().getFullYear();
+                footerDate.textContent = currentYear;
             });
         </script>
     </body>

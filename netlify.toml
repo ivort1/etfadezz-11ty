@@ -1,4 +1,0 @@
-[build.processing]
-    skip_processing = true
-    bundle = true
-    minify = true
