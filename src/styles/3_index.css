@@ -25,9 +25,16 @@
     align-items: center;
 }
 
-.service-item:hover {
-    background: var(--black-lighter);
-    padding-left: 2rem;
+.service-item:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+@media(hover:hover) {
+    .service-item:hover {
+        background: var(--black-lighter);
+        padding-left: 2rem;
+    }
 }
 
 .service-name {
