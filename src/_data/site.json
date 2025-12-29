@@ -111,39 +111,39 @@
     "faqs": [
         {
             "question": "Do I need an appointment, or are walk-ins welcome?",
-            "answer": "We operate on an appointment-only basis to ensure each client receives personalized, premium grooming service. We highly recommend booking your appointment through our simple online scheduling system to secure your preferred time. If you prefer, appointments can also be set up via text or phone. This structured approach minimizes wait times and helps us deliver a consistently outstanding barbershop experience."
+            "answer": "We're appointment-only to give each client dedicated, one-on-one service. Book online, by text, or by phone. This keeps wait times short and ensures you get our full attention."
         },
         {
-            "question": "Where is your studio located, and what areas do you serve?",
-            "answer": "Our studio is proudly based in Fontana, CA. Beyond our Fontana location, we expand our reach with convenient house-call services in cities across San Bernardino County, Orange County, and Los Angeles County. For more detailed information on specific service areas or to verify availability in your neighborhood, please contact us. We're committed to bringing exceptional service right to your doorstep."
+            "question": "Where is your barbershop located, and what areas do you serve?",
+            "answer": "Our studio is in Fontana, CA. We also offer house calls throughout San Bernardino County, Orange County, and Los Angeles County. Contact us to confirm availability in your area."
         },
         {
-            "question": "How do I reschedule or cancel my appointment and what is your refund policy?",
-            "answer": "You can reschedule or cancel your appointment quickly through our online scheduling platform, as well as by text or phone—whichever is most convenient for you. Please note that to be eligible for a refund, cancellations must be made at least one hour before your scheduled appointment time. Cancellations made less than one hour before, as well as no-shows, are non-refundable, with no exceptions. This policy helps us maintain efficient scheduling and ensures every client receives the dedicated service they expect."
+            "question": "How do I reschedule or cancel my appointment?",
+            "answer": "Reschedule or cancel through the link in your confirmation email, or contact us by text or phone. Cancellations made at least one hour before your appointment are eligible for a refund. Late cancellations and no-shows are non-refundable."
         },
         {
             "question": "What payment methods do you accept?",
-            "answer": "We accept a variety of payment methods in-person for your convenience, including cash, major credit and debit cards (Visa, MasterCard, American Express, Discover), and mobile payment options such as Apple Pay and Google Pay. Our goal is to make the payment process as seamless as possible, allowing you to focus on enjoying your premium grooming experience."
+            "answer": "We accept cash, all major credit cards, and mobile payments (Apple Pay, Google Pay) in person via Square. Tips are always appreciated and can be added at checkout."
         },
         {
-            "question": "How do you calculate the price of a house call?",
-            "answer": "The cost is determined by the distance traveled from our Fontana base, the number of clients served during the appointment, and the specific types of services requested. Please note that our minimum charge is $60, regardless of all other factors. For a precise quote that reflects your unique requirements, please contact us directly."
+            "question": "How much does a house call cost?",
+            "answer": "Pricing depends on distance from our Fontana location, number of clients, and services requested. The minimum charge is $60. Contact us for an exact quote."
         },
         {
-            "question": "Do you offer early/after hours services?",
-            "answer": "Yes, we do offer early and after-hours services for an additional fee. Whether you're in need of an early morning cut or a late-evening appointment, our flexible scheduling options cater to busy lifestyles. Please contact us to confirm availability and pricing details."
+            "question": "Do you offer early morning or late night appointments?",
+            "answer": "Yes, early and after-hours appointments are available for an additional fee. Contact us to check availability and pricing."
         },
         {
             "question": "Do you cut kids' hair?",
-            "answer": "Yes, we do! We cater to children of all ages and take pride in offering professional kids’ haircuts in a friendly, welcoming environment. Each child receives a precise and stylish haircut, making the experience enjoyable for both kids and parents. Whether you're booking an appointment online or scheduling via phone or text, we're here to help your little ones look their absolute best."
+            "answer": "Yes, we cut hair for children of all ages. Kids get the same precision and attention as adults in a relaxed, friendly environment."
         },
         {
             "question": "Do you have a public restroom?",
-            "answer": "No, we do not have a public restroom available at our barbershop. We focus exclusively on providing a premium, personalized grooming experience, so please plan accordingly if you require restroom access."
+            "answer": "No, we don't have a public restroom. Please plan accordingly before your appointment."
         },
         {
-            "question": "How can I contact your studio for more information or to ask a question?",
-            "answer": "To reach out for more details about our premium services, simply call or text us at (626) 216-4488. You can also send us a direct message on our Instagram page, @etfadezz. Our team is ready to answer your questions and help guide you toward the best barbershop experience possible."
+            "question": "How can I contact you?",
+            "answer": "Call or text us at (626) 216-4488, or send a DM on Instagram @etfadezz. We're happy to answer any questions."
         }
     ]
 }
