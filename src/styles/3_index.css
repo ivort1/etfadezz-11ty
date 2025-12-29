@@ -13,13 +13,16 @@
 }
 
 .service-item {
+    background: var(--black-soft);
+    cursor: pointer;
+    padding: 1.5rem;
+    text-align: left;
+    transition: all 0.3s ease;
+
+    /* Flexbox */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-    background: var(--black-soft);
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .service-item:hover {
