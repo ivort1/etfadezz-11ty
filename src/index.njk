@@ -461,6 +461,9 @@
                 --white-muted: #a0a0a0;
                 --accent: #e8e8e8;
                 --gray: #404040;
+
+                /* Animations */
+                --speed_fadeUp: 0.6s;
             }
 
             * {
@@ -642,7 +645,7 @@
             .hero-content {
                 position: relative;
                 z-index: 1;
-                animation: fadeUp 1.2s ease-out;
+                animation: fadeUp var(--speed_fadeUp) ease-out;
             }
 
             @keyframes fadeUp {
@@ -663,14 +666,14 @@
                 text-transform: uppercase;
                 color: var(--white-muted);
                 margin-bottom: 1.5rem;
-                animation: fadeUp 1.2s ease-out 0.2s backwards;
+                animation: fadeUp var(--speed_fadeUp) ease-out 0.2s backwards;
             }
 
             .hero h1 {
                 font-size: clamp(2.5rem, 12vw, 5rem);
                 line-height: 1.1;
                 margin-bottom: 1.5rem;
-                animation: fadeUp 1.2s ease-out 0.4s backwards;
+                animation: fadeUp var(--speed_fadeUp) ease-out 0.4s backwards;
             }
 
             .hero h1 span {
@@ -684,11 +687,11 @@
                 color: var(--white-muted);
                 max-width: 280px;
                 margin: 0 auto 2.5rem;
-                animation: fadeUp 1.2s ease-out 0.6s backwards;
+                animation: fadeUp var(--speed_fadeUp) ease-out 0.6s backwards;
             }
 
             .hero-cta {
-                animation: fadeUp 1.2s ease-out 0.8s backwards;
+                animation: fadeUp var(--speed_fadeUp) ease-out 0.8s backwards;
                 cursor: pointer;
                 display: inline-block;
                 font-size: 0.7rem;
@@ -1078,11 +1081,81 @@
         <script>
             window.addEventListener('load', () => {
                 // FAQ initialization
-                import('/scripts/faq.js').then(({ FAQClient }) => {
-                    const faq = new FAQClient();
-                    faq.init();
-                });
+                class FAQClient {
+                    constructor(rootElement = document) {
+                        this.root = rootElement;
+                    }
 
+                    init() {
+                        const faqSections = this.root.querySelectorAll('[data-component="faq"]');
+                        if (faqSections.length === 0) {
+                            console.log('No FAQ components found on this page');
+                            return;
+                        }
+
+                        faqSections.forEach(section => {
+                            this.enhanceSection(section);
+                        });
+
+                        this.handleDeepLinking();
+                        console.log('✓ FAQ components enhanced');
+                    }
+
+                    enhanceSection(section) {
+                        const detailsElements = section.querySelectorAll('details.faq-item');
+                        
+                        detailsElements.forEach(details => {
+                            details.classList.add('faq-item--enhanced');
+                            details.addEventListener('toggle', (e) => {
+                                this.handleToggle(e);
+                            });
+                        });
+                    }
+
+                    handleToggle(event) {
+                        const details = event.target;
+                        
+                        if (details.open) {
+                            this.scrollIntoViewIfNeeded(details);
+                        }
+                    }
+
+                    scrollIntoViewIfNeeded(details) {
+                        setTimeout(() => {
+                            const rect = details.getBoundingClientRect();
+                            const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                            
+                            if (!isVisible) {
+                                details.scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'nearest' 
+                                });
+                            }
+                        }, 100);
+                    }
+
+                    handleDeepLinking() {
+                        const hash = window.location.hash.slice(1);
+                        if (!hash) return;
+
+                        const targetDetails = this.root.querySelector(
+                            `details.faq-item[data-faq-id="${hash}"]`
+                        );
+
+                        if (targetDetails) {
+                            targetDetails.open = true;
+                            setTimeout(() => {
+                                targetDetails.scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'start' 
+                                });
+                            }, 100);
+                        }
+                    }
+                }
+                const faq = new FAQClient();
+                faq.init();
+                
                 // Dynamic year in footer
                 const footerDate = document.getElementById('footer-dynamic-date');
                 const currentYear = new Date().getFullYear();
