@@ -1,19 +1,13 @@
 /* Services Section */
-.services {
-    background: var(--black-soft);
-}
-
 .services-grid {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    background: var(--black-lighter);
     max-width: 500px;
     margin: 0 auto;
 }
 
 .service-item {
-    background: var(--black-soft);
     cursor: pointer;
     padding: 1.5rem;
     text-align: left;
@@ -32,7 +26,7 @@
 
 @media(hover:hover) {
     .service-item:hover {
-        background: var(--black-lighter);
+        background: var(--black-soft);
         padding-left: 2rem;
     }
 }
@@ -69,10 +63,6 @@
 }
 
 /* Gallery Section */
-.gallery {
-    background: var(--black);
-}
-
 .gallery-grid {
     columns: 2;
     column-gap: 0.5rem;
@@ -131,10 +121,6 @@
 }
 
 /* FAQs Section */
-.faqs {
-    background: var(--black-soft);
-}
-
 .faq-list {
     max-width: 500px;
     margin: 0 auto;
