@@ -32,7 +32,7 @@
 }
 
 .service-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     font-weight: 400;
 }
@@ -143,7 +143,7 @@
 .faq-item__question {
     color: var(--white);
     cursor: pointer;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.25rem;
     font-weight: 400;
     padding: 0 1.5rem 2rem 1.5rem;
@@ -380,4 +380,93 @@ details[open] .faq-item__icon::after {
     font-size: 0.65rem;
     color: var(--white-muted);
     letter-spacing: 0.1em;
+}
+
+.footer-bottom a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Areas We Serve Section */
+.areas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.area-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: var(--white-muted);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--gray);
+}
+
+.area-link:last-child {
+    border-bottom: none;
+}
+
+.area-link svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.area-link:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+@media (hover: hover) {
+    .area-link:hover {
+        color: var(--white);
+        background: var(--black-soft);
+        padding-left: 2rem;
+    }
+
+    .area-link:hover svg {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .areas-grid {
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .area-link {
+        border-bottom: 1px solid var(--gray);
+        border-right: 1px solid var(--gray);
+    }
+
+    .area-link:nth-child(2n) {
+        border-right: none;
+    }
+}
+
+/* City Intro Section */
+.city-intro__text {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--white-muted);
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.city-intro__cta {
+    display: flex;
+    justify-content: center;
 }

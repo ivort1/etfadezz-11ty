@@ -1,0 +1,128 @@
+---
+pagination:
+  data: cities
+  size: 1
+  alias: city
+permalink: "/{{ city.slug }}/"
+layout: layouts/city.njk
+---
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="stars-wrapper" id="stars-wrapper">
+            <svg class="extras" width="100%" height="100%" preserveAspectRatio="none">
+                <defs>
+                    <radialGradient id="comet-gradient" cx="0" cy=".5" r="0.5">
+                        <stop offset="0%" stop-color="rgba(255,255,255,.8)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                    </radialGradient>
+                </defs>
+                <g transform="rotate(-135)">
+                    <ellipse class="comet comet-a" fill="url(#comet-gradient)" cx="0" cy="0" rx="150" ry="2" />
+                </g>
+                <g transform="rotate(20)">
+                    <ellipse class="comet comet-b" fill="url(#comet-gradient)" cx="100%" cy="0" rx="150" ry="2" />
+                </g>
+                <g transform="rotate(300)">
+                    <ellipse class="comet comet-c" fill="url(#comet-gradient)" cx="40%" cy="100%" rx="150" ry="2" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Private Barber Studio · Fontana, CA</p>
+            <h1>{{ city.h1 }} <span class="hero__header-span">{{ city.h1Span }}</span></h1>
+            <p class="hero-tagline">{{ city.tagline }}</p>
+            <button class="hero-cta hero-cta-primary" data-cal-link="etfadezz" data-cal-config='{"layout":"month_view"}'>Book your appointment</button>
+            <a href="tel:{{ site.information.phone }}" class="hero-cta hero-cta-secondary">Call the Studio</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- City Intro Section -->
+    <section class="city-intro" id="about">
+        <div class="section-header">
+            <p class="section-label">Serving {{ city.name }}</p>
+            <h2 class="section-title">Why ET Fadezz</h2>
+        </div>
+        <p class="city-intro__text">{{ city.intro }}</p>
+        <div class="city-intro__cta">
+            <button class="hero-cta hero-cta-primary" data-cal-link="etfadezz" data-cal-config='{"layout":"month_view"}'>Book Now — It's Free</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <p class="section-label">What We Offer</p>
+            <h2 class="section-title">Services</h2>
+        </div>
+        <div class="services-grid">
+            {% for service in site.services %}
+                <button type="button" class="service-item" data-cal-link="{{ service.cal_link }}" data-cal-config='{"layout":"month_view"}'>
+                    <div>
+                        <div class="service-name">{{ service.name }}</div>
+                        <span class="service-duration">{{ service.duration }}</span>
+                    </div>
+                    <span class="service-price">
+                        {{ service.price }}
+                        <svg class="service-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs" id="faqs" data-component="faq">
+        <div class="section-header">
+            <p class="section-label">Have a question?</p>
+            <h2 class="section-title">FAQs</h2>
+        </div>
+        <div class="faq-list">
+            {% for faq in site.faqs %}
+                <details name="faqs" class="faq-item" data-faq-id="faq-{{ loop.index }}">
+                    <summary class="faq-item__question">
+                        <span class="faq-item__question-text">{{ faq.question }}</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__answer">
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                </details>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Areas We Serve -->
+    <section class="areas" id="areas">
+        <div class="section-header">
+            <p class="section-label">Also Nearby</p>
+            <h2 class="section-title">Areas We Serve</h2>
+        </div>
+        <div class="areas-grid">
+            <a href="/" class="area-link">
+                Fontana, CA
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            {% for c in cities %}
+                {% if c.slug !== city.slug %}
+                    <a href="/{{ c.slug }}/" class="area-link">
+                        {{ c.name }}, CA
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M10 7L15 12L10 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+</main>
