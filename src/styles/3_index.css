@@ -383,8 +383,13 @@ details[open] .faq-item__icon::after {
 }
 
 .footer-bottom a {
+    transition: color 0.2s ease-in-out;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
 }
 
 /* Areas We Serve Section */
